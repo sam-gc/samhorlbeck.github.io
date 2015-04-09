@@ -1,0 +1,125 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="main.css"></head><body>
+<div class="whole-body">
+<div class="maintitle">Lanky Standard Library</div>
+<div class="class-header">
+<div class="class-title">Table</div>
+<div class="class-description">A quick hashtable implementation; wraps the interpreter hashtable (which is used for storing members). Custom objects can override default hash behavior by implementing their own <span class="mono">hash_</span> method. Note that if you use your own <span class="mono">hash_</span> method, you should also specify your own <span class="mono">op_equals_</span> method.</div></div>
+<div class="return-link"><a href="index.html">Back</a></div>
+<div class="class-contents">
+<div class="proto-field-container"><div class="proto-field-header">Prototype Fields</div><ul class="proto-field-list">
+<li><span class="field-name">count:</span><span class="field-description">The number of elements in the table</span></li>
+<li><span class="field-name">size_:</span><span class="field-description">The number of buckets allocated for the table</span></li>
+<li><span class="field-name">hb_:</span><span class="field-description">The binary blob holding a reference to the actual hashtable</span></li>
+</ul></div>
+<div class="static-method-container"><div class="static-method-header">Static Methods</div><ul class="static-method-list">
+<li class="method-chunk"><span class="method-name">new:</span><span class="method-func">func(</span><span class="method-func-arg">[keys]</span><span class="method-func">, </span><span class="method-func-arg">[values]</span><span class="method-func">)</span><br/><div class="method-description">The main constructor; same as <span class="mono">[:]</span> literal</div><table class="method-params">
+<tr>
+<td><span class="param-name">[keys]</span></td>
+<td><span class="param-descrip">An array of keys to add</span></li></td>
+</tr>
+<tr>
+<td><span class="param-name">[values]</span></td>
+<td><span class="param-descrip">An array of values to add</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This method, if provided with no arguments, will return an empty table. If two arguments are provided, they are interpreted to be an array of keys and an array of values respectively. In that case, a new table will be created by matching/building key-value pairs; <span class="mono">keys.count == values.count</span> must be true.</div>
+</li>
+</ul></div>
+<div class="proto-method-container"><div class="proto-method-header">Prototype Methods</div><ul class="proto-method-list">
+<li class="method-chunk"><span class="method-name">put:</span><span class="method-func">func(</span><span class="method-func-arg">key</span><span class="method-func">, </span><span class="method-func-arg">value</span><span class="method-func">)</span><br/><div class="method-description">Inserts a value into the table</div><table class="method-params">
+<tr>
+<td><span class="param-name">key</span></td>
+<td><span class="param-descrip">The key to use</span></li></td>
+</tr>
+<tr>
+<td><span class="param-name">value</span></td>
+<td><span class="param-descrip">The value to insert</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">Hashes key and puts value in the table at the proper location</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">get:</span><span class="method-func">func(</span><span class="method-func-arg">key</span><span class="method-func">)</span><br/><div class="method-description">Gets a value from the table</div><table class="method-params">
+<tr>
+<td><span class="param-name">key</span></td>
+<td><span class="param-descrip">The key to use</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">Hashes key and returns a value if found, otherwise returns <span class="mono">nil</span>.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">hasKey:</span><span class="method-func">func(</span><span class="method-func-arg">key</span><span class="method-func">)</span><br/><div class="method-description">Returns <span class="mono">yes</span> if the table contains a given key</div><table class="method-params">
+<tr>
+<td><span class="param-name">key</span></td>
+<td><span class="param-descrip">The key to look for</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">hasValue:</span><span class="method-func">func(</span><span class="method-func-arg">value</span><span class="method-func">)</span><br/><div class="method-description">Returns <span class="mono">yes</span> if the table contains a given value</div><table class="method-params">
+<tr>
+<td><span class="param-name">value</span></td>
+<td><span class="param-descrip">The value to look for</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This is an expensive operation.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">keys:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Returns an array of keys</div><div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">values:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Returns an array of values</div><div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">remove:</span><span class="method-func">func(</span><span class="method-func-arg">key</span><span class="method-func">)</span><br/><div class="method-description">Removes the key-value pair with a given key</div><table class="method-params">
+<tr>
+<td><span class="param-name">key</span></td>
+<td><span class="param-descrip">The key to remove</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">removeValue:</span><span class="method-func">func(</span><span class="method-func-arg">value</span><span class="method-func">)</span><br/><div class="method-description">Removes all key-value pairs with a given value</div><table class="method-params">
+<tr>
+<td><span class="param-name">value</span></td>
+<td><span class="param-descrip">The value to remove</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This is a more costly operation than <span class="mono">remove</span>. All values that match <span class="mono">value</span> in the table will be removed.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">addAll:</span><span class="method-func">func(</span><span class="method-func-arg">other</span><span class="method-func">)</span><br/><div class="method-description">Adds all the elements from another table</div><table class="method-params">
+<tr>
+<td><span class="param-name">other</span></td>
+<td><span class="param-descrip">The table whose elements you wish to add</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">Copies all of the key-value pairs from <span class="mono">other</span> to <span class="mono">self</span>, modifying <span class="mono">self</span> while leaving <span class="mono">other</span> unmodified.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">op_get_index_:</span><span class="method-func">func(</span><span class="method-func-arg">key</span><span class="method-func">)</span><br/><div class="method-description">Syntactic sugar around <span class="mono">[]</span>; see <span class="mono">get</span> above</div><table class="method-params">
+<tr>
+<td><span class="param-name">key</span></td>
+<td><span class="param-descrip">The key to get</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">op_set_index_:</span><span class="method-func">func(</span><span class="method-func-arg">key</span><span class="method-func">, </span><span class="method-func-arg">value</span><span class="method-func">)</span><br/><div class="method-description">Syntactic sugar for <span class="mono">[] =</span>; see <span class="mono">put</span> above</div><table class="method-params">
+<tr>
+<td><span class="param-name">key</span></td>
+<td><span class="param-descrip">The key to use</span></li></td>
+</tr>
+<tr>
+<td><span class="param-name">value</span></td>
+<td><span class="param-descrip">The value to insert</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+</ul></div>
+</div></div>
+</body></html>

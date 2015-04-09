@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="main.css"></head><body>
+<div class="whole-body">
+<div class="maintitle">Lanky Standard Library</div>
+<div class="class-header">
+<div class="class-title">Function</div>
+<div class="class-description">The nebulous function type; cannot be directly instantiated. The following methods work on any Lanky function in the interpreter context</div></div>
+<div class="return-link"><a href="index.html">Back</a></div>
+<div class="class-contents">
+<div class="proto-field-container"><div class="proto-field-header">Prototype Fields</div><ul class="proto-field-list">
+<li><span class="field-name">argc:</span><span class="field-description">The number of arguments the function takes</span></li>
+</ul></div>
+<div class="proto-method-container"><div class="proto-method-header">Prototype Methods</div><ul class="proto-method-list">
+<li class="method-chunk"><span class="method-name">bind:</span><span class="method-func">func(</span><span class="method-func-arg">obj</span><span class="method-func">)</span><br/><div class="method-description">Binds the function to some object</div><table class="method-params">
+<tr>
+<td><span class="param-name">obj</span></td>
+<td><span class="param-descrip">The object to bind on</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">When you write a function as <span class="mono">func() -> self {}</span>, <span class="mono">self</span> is considered the bound variable. Unlike in JavaScript, the <span class="mono">self</span> is not implicit. You will get an error if you try to bind a function that does not have a refname set. When a method is retrieved through dot notation (i.e. <span class="mono">obj.method()</span>), the <span class="mono">method</span> func is automatically bound to <span class="mono">obj</span>. This method is merely a manual way of doing the same thing. Thus, <span class="mono">obj.method()</span> is the same as <span class="mono">method.bind(obj)()</span>. The method returns the original function to make this kind of calling possible.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">args_:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Returns an array of the names of the arguments</div><div class="method-discussion">This method will fail on functions using native code; it is only valid if the function is compiled as Lanky bytecode.</div>
+</li>
+</ul></div>
+</div></div>
+</body></html>

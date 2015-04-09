@@ -1,0 +1,233 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="main.css"></head><body>
+<div class="whole-body">
+<div class="maintitle">Lanky Standard Library</div>
+<div class="class-header">
+<div class="class-title">Math</div>
+<div class="class-description">A common class to aggregate mathematical functions. All of the static methods below can be used standalone (i.e. they are not bound to the Math class).</div></div>
+<div class="return-link"><a href="index.html">Back</a></div>
+<div class="class-contents">
+<div class="static-field-container"><div class="static-field-header">Static Fields</div><ul class="static-field-list">
+<li><span class="field-name">pi:</span><span class="field-description">A floating-point constant representing <i>&pi;</i></span></li>
+<li><span class="field-name">e:</span><span class="field-description">A floating-point constant representing <i>e</i></span></li>
+</ul></div>
+<div class="static-method-container"><div class="static-method-header">Static Methods</div><ul class="static-method-list">
+<li class="method-chunk"><span class="method-name">rand:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Simple wrapper for C's <span class="mono">rand</span> function</div><div class="method-discussion">The random number generator is initialized when the interpreter spins up.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">randInt:</span><span class="method-func">func(</span><span class="method-func-arg">min</span><span class="method-func">, </span><span class="method-func-arg">max</span><span class="method-func">)</span><br/><div class="method-description">Generates a random number between two bounds</div><table class="method-params">
+<tr>
+<td><span class="param-name">min</span></td>
+<td><span class="param-descrip">The minimum value (inclusive) for the generator</span></li></td>
+</tr>
+<tr>
+<td><span class="param-name">max</span></td>
+<td><span class="param-descrip">The maximum value (exclusive)</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This function will return a random number between <span class="mono">min</span> and <span class="mono">max</span>. Mathematically the range of this function can be expressed as <span class="mono">[min, max)</span>.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">shuffle:</span><span class="method-func">func(</span><span class="method-func-arg">arr</span><span class="method-func">)</span><br/><div class="method-description">Shuffles the given array</div><table class="method-params">
+<tr>
+<td><span class="param-name">arr</span></td>
+<td><span class="param-descrip">The array to shuffle</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This method will return an array that contains the shuffled elements of the input.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">range:</span><span class="method-func">func(</span><span class="method-func-arg">max</span><span class="method-func">)</span><br/><div class="method-description">Returns an array of a range of numbers</div><table class="method-params">
+<tr>
+<td><span class="param-name">max</span></td>
+<td><span class="param-descrip">The max value in the range (exclusive)</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This method will return an array containing the range of numbers <span class="mono">[0, max)</span>.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">atan2:</span><span class="method-func">func(</span><span class="method-func-arg">y</span><span class="method-func">, </span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">atan2</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">y</span></td>
+<td><span class="param-descrip">The arctangent y value</span></li></td>
+</tr>
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The arctangent x value</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">abs:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">fabs</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">sin:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">sin</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">cos:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">cos</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">tan:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">tan</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">acos:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">acos</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">asin:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">asin</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">atan:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">atan</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">cosh:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">cosh</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">sinh:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">sinh</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">tanh:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">tanh</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">acosh:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">acosh</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">asinh:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">asinh</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">atanh:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">atanh</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">exp:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">exp</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">log:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">log</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">sqrt:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">sqrt</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">ceil:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">ceil</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">floor:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">floor</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">round:</span><span class="method-func">func(</span><span class="method-func-arg">x</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around C's <span class="mono">round</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">x</span></td>
+<td><span class="param-descrip">The numeric input to the function</span></li></td>
+</tr>
+</table>
+<div class="method-discussion"></div>
+</li>
+</ul></div>
+</div></div>
+</body></html>

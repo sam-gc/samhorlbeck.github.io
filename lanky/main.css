@@ -1,0 +1,224 @@
+body {
+    font-family: sans;
+    font-size: 12pt;
+    background: gray;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+}
+
+.title {
+    font-family: serif;
+    font-size: 30pt;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background: #98D1E3;
+    border-bottom: 1px solid #13A5D1;
+}
+
+.title hr {
+    width: 50%;
+}
+
+.description {
+    font-size: 13pt;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.whole-body {
+    background: white;
+    width: 70%;
+    margin-left: 15%;
+    border-left: 1px solid #424242;
+    border-right: 1px solid #424242;
+    padding-bottom: 10px;
+}
+
+.whole-body-index {
+    background: white;
+    width: 70%;
+    margin-left: 15%;
+    border: 1px solid #424242;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.whole-body-index ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+.maintitle {
+    text-align: center;
+    padding-top: 6px;
+    font-size: 13pt;
+    font-style: italic;
+    font-family: serif;
+}
+
+.class-header {
+    padding: 10px;
+}
+
+.class-title {
+    font-size: 24pt;
+}
+
+.class-description {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 13pt;
+}
+
+.static-method-header {
+    font-weight: bold;
+    font-size: 13pt;
+    background: #98D1E3;
+    border-top: 1px solid #13A5D1;
+    border-bottom: 1px solid #13A5D1;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.static-field-header {
+    font-weight: bold;
+    font-size: 13pt;
+    background: #98D1E3;
+    border-top: 1px solid #13A5D1;
+    border-bottom: 1px solid #13A5D1;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.proto-method-header {
+    font-weight: bold;
+    font-size: 13pt;
+    background: #98D1E3;
+    border-top: 1px solid #13A5D1;
+    border-bottom: 1px solid #13A5D1;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.proto-field-header {
+    font-weight: bold;
+    font-size: 13pt;
+    background: #98D1E3;
+    border-top: 1px solid #13A5D1;
+    border-bottom: 1px solid #13A5D1;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.return-link {
+
+}
+
+.proto-field-container {
+
+}
+
+.static-field-container {
+}
+
+.proto-method-container {
+
+}
+
+.static-method-container {
+}
+
+.proto-field-list {
+
+}
+
+.static-field-list {
+}
+
+.proto-method-list {
+    margin-top: 10px;
+}
+
+.static-method-list {
+    margin-top: 10px;
+}
+
+.method-name {
+    font-weight: bold;
+    margin-right: 10px;
+    font-family: monospace;
+}
+
+.method-func {
+    font-family: monospace;
+    color: rgb(40, 40, 40);
+}
+
+.method-func-arg {
+    font-family: monospace;
+    color: #AB2918;
+}
+
+.method-description {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.method-params {
+    margin-left: 35px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: solid;
+    border-color: rgb(230, 230, 230);
+    border-width: 1px 0;
+}
+
+.method-discussion {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.param-name {
+    font-family: monospace;
+    margin-right: 10px;
+    color: #AB2918;
+}
+
+.param-descrip {
+
+}
+
+.field-name {
+    font-weight: bold;
+    margin-right: 10px;
+    font-family: monospace;
+}
+
+.field-description {
+
+}
+
+.mono {
+    font-family: monospace;
+}
+
+.proto-method-list li {
+    margin-top: 10px;
+}
+
+.static-method-list li {
+    margin-top: 10px;
+}

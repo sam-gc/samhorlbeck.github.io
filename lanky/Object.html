@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="main.css"></head><body>
+<div class="whole-body">
+<div class="maintitle">Lanky Standard Library</div>
+<div class="class-header">
+<div class="class-title">Object</div>
+<div class="class-description">The root object class that from which everything else inherits</div></div>
+<div class="return-link"><a href="index.html">Back</a></div>
+<div class="class-contents">
+<div class="static-method-container"><div class="static-method-header">Static Methods</div><ul class="static-method-list">
+<li class="method-chunk"><span class="method-name">new:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">The basic constructior</div><div class="method-discussion">This method has the same effect as using the object literal <span class="mono">{.}</span></div>
+</li>
+</ul></div>
+<div class="proto-method-container"><div class="proto-method-header">Prototype Methods</div><ul class="proto-method-list">
+<li class="method-chunk"><span class="method-name">has:</span><span class="method-func">func(</span><span class="method-func-arg">name</span><span class="method-func">)</span><br/><div class="method-description">Returns true if the object has a member with the given name</div><table class="method-params">
+<tr>
+<td><span class="param-name">name</span></td>
+<td><span class="param-descrip">The name of the member to check for</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This method will return <span class="mono">yes</span> if the object has any member with the given name. Note that this checks for any object, unlike <span class="mono">responds_to</span>, so if the object has a field or a method whose name matches, the method returns in the affirmative.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">responds_to:</span><span class="method-func">func(</span><span class="method-func-arg">name</span><span class="method-func">)</span><br/><div class="method-description">Returns true only if the object responds to a method of the given name</div><table class="method-params">
+<tr>
+<td><span class="param-name">name</span></td>
+<td><span class="param-descrip">The name of the method to check for</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">Unlike <span class="mono">has</span>, this method will only respond true if the object has a member <span class="mono">name</span> and that member is a function.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">remove_member:</span><span class="method-func">func(</span><span class="method-func-arg">name</span><span class="method-func">)</span><br/><div class="method-description">Removes the member of the specified name if it exists</div><table class="method-params">
+<tr>
+<td><span class="param-name">name</span></td>
+<td><span class="param-descrip">The name of the member to remove</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This is the only way to actively remove a member of an object (simply setting its value to nil will not have the same effect). Note that this will not effect any of the object's prototypes; only members of the object itself can be removed.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">stringify_:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Turns the object into a string</div><div class="method-discussion">This is the default stringification function for all objects. Its form is as follows: <span class="mono">(lky_object | %p)</span> where <span class="mono">%p</span> is the pointer to the object. Individual objects can and should override this method.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">op_equals_:</span><span class="method-func">func(</span><span class="method-func-arg">other</span><span class="method-func">)</span><br/><div class="method-description">Returns <span class="mono">yes</span> if and only if the object and the argument are equal</div><table class="method-params">
+<tr>
+<td><span class="param-name">other</span></td>
+<td><span class="param-descrip">The object to compare to</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This is the default equals implementation. This method is only concerned with whether or not the pointer values match.</div>
+</li>
+</ul></div>
+</div></div>
+</body></html>

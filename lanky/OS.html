@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="main.css"></head><body>
+<div class="whole-body">
+<div class="maintitle">Lanky Standard Library</div>
+<div class="class-header">
+<div class="class-title">OS</div>
+<div class="class-description">A static class used for interfacing with the operating system</div></div>
+<div class="return-link"><a href="index.html">Back</a></div>
+<div class="class-contents">
+<div class="static-field-container"><div class="static-field-header">Static Fields</div><ul class="static-field-list">
+<li><span class="field-name">argc:</span><span class="field-description">The number of arguments passed to the script</span></li>
+<li><span class="field-name">argv:</span><span class="field-description">An array of arguments (as strings) passed to the script</span></li>
+</ul></div>
+<div class="static-method-container"><div class="static-method-header">Static Methods</div><ul class="static-method-list">
+<li class="method-chunk"><span class="method-name">system:</span><span class="method-func">func(</span><span class="method-func-arg">command</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around the C <span class="mono">system</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">command</span></td>
+<td><span class="param-descrip">The command to run in the shell</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This method just wraps the C <span class="mono">system</span> function, so this is very much OS dependant. Generally the <span class="mono">command</span> will be executed in the local shell.</div>
+</li>
+</ul></div>
+</div></div>
+</body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="main.css"></head><body>
+<div class="whole-body">
+<div class="maintitle">Lanky Standard Library</div>
+<div class="class-header">
+<div class="class-title">Io</div>
+<div class="class-description">Interface for standard IO behavior with the terminal</div></div>
+<div class="return-link"><a href="index.html">Back</a></div>
+<div class="class-contents">
+<div class="static-method-container"><div class="static-method-header">Static Methods</div><ul class="static-method-list">
+<li class="method-chunk"><span class="method-name">put:</span><span class="method-func">func(</span><span class="method-func-arg">obj</span><span class="method-func">)</span><br/><div class="method-description">Prints the argument with no trailing newline</div><table class="method-params">
+<tr>
+<td><span class="param-name">obj</span></td>
+<td><span class="param-descrip">The object to print</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">The printed value will be a stringified version of the object. If <span class="mono">obj</span> is a native type, it will be directly converted. Otherwise the object's <span class="mono">stringify_</span> method will be called. Depending on your configuration, the standard out buffer may not be flushed by this operation.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">putln:</span><span class="method-func">func(</span><span class="method-func-arg">obj</span><span class="method-func">)</span><br/><div class="method-description">Prints the argument with a trailing newline</div><table class="method-params">
+<tr>
+<td><span class="param-name">obj</span></td>
+<td><span class="param-descrip">The object to print</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">Functions exactly as <span class="mono">put</span> above, but adds a newline. Note that this will also flush the buffer</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">prompt:</span><span class="method-func">func(</span><span class="method-func-arg">obj</span><span class="method-func">)</span><br/><div class="method-description">Gets a line of user input, first printing the argument as a prompt</div><table class="method-params">
+<tr>
+<td><span class="param-name">obj</span></td>
+<td><span class="param-descrip">The object to print as a prompt</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">First the object is printed, then the method waits for the user to type input and press the return key. The method returns this input as a string, without the trailing newline.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">fopen:</span><span class="method-func">func(</span><span class="method-func-arg">path</span><span class="method-func">, </span><span class="method-func-arg">flags</span><span class="method-func">)</span><br/><div class="method-description">Wrapper around the standard C <span class="mono">fopen</span> function</div><table class="method-params">
+<tr>
+<td><span class="param-name">path</span></td>
+<td><span class="param-descrip">The relative or absolute path to the file</span></li></td>
+</tr>
+<tr>
+<td><span class="param-name">flags</span></td>
+<td><span class="param-descrip">The read/write flags (r, w, b, etc..)</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">This method will attempt to open the file. If the file is not found, the interpreter will segfault (don't be stupid). If the file is found and the requested mode is valid, a file object will be returned. Please see the <span class="mono">File</span> class for more information of applicable methods.</div>
+</li>
+</ul></div>
+</div></div>
+</body></html>
