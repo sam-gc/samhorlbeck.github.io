@@ -8,6 +8,7 @@
 <div class="class-contents">
 <div class="proto-field-container"><div class="proto-field-header">Prototype Fields</div><ul class="proto-field-list">
 <li><span class="field-name">EOF:</span><span class="field-description">A flag that is set to <span class="mono">yes</span> or <span class="mono">no</span>, depending on whether or not the end of the file has been reached.</span></li>
+<li><span class="field-name">fb_:</span><span class="field-description">The binary blob containing the file information</span></li>
 </ul></div>
 <div class="proto-method-container"><div class="proto-method-header">Prototype Methods</div><ul class="proto-method-list">
 <li class="method-chunk"><span class="method-name">getln:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reads a line of input for files in "r" mode</div><div class="method-discussion">This method will throw an error if the file mode is incorrect. If the end of the file has been reached (<span class="mono">EOF</span> will be set in this case), then the method returns <span class="mono">nil</span>. Otherwise, it will return a string stripped of the newline containing the contents of the line at the current position in the file.</div>
