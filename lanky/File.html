@@ -10,13 +10,13 @@
 <li><span class="field-name">EOF:</span><span class="field-description">A flag that is set to <span class="mono">yes</span> or <span class="mono">no</span>, depending on whether or not the end of the file has been reached.</span></li>
 </ul></div>
 <div class="proto-method-container"><div class="proto-method-header">Prototype Methods</div><ul class="proto-method-list">
-<li class="method-chunk"><span class="method-name">getln:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reads a line of input for files in "r" mode</div><div class="method-discussion">This method will segfault if the file mode is incorrect. If the end of the file has been reached (<span class="mono">EOF</span> will be set in this case), then the method returns <span class="mono">nil</span>. Otherwise, it will return a string stripped of the newline containing the contents of the line at the current position in the file.</div>
+<li class="method-chunk"><span class="method-name">getln:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reads a line of input for files in "r" mode</div><div class="method-discussion">This method will throw an error if the file mode is incorrect. If the end of the file has been reached (<span class="mono">EOF</span> will be set in this case), then the method returns <span class="mono">nil</span>. Otherwise, it will return a string stripped of the newline containing the contents of the line at the current position in the file.</div>
 </li>
 <hr/>
-<li class="method-chunk"><span class="method-name">getlns:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reads the contents of the file into an array</div><div class="method-discussion">The method will return an array of strings representing lines in the file (this is implemented in C and is therefore faster than calling <span class="mono">getall().split(...)</span>). The strings in the array will have been stripped of their newlines. Note that this will not rewind the file; rather it will return all of the lines from the current position. <span class="mono">EOF</span> will be set to <span class="mono">yes</span>.</div>
+<li class="method-chunk"><span class="method-name">getlns:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reads the contents of the file into an array</div><div class="method-discussion">The method will return an array of strings representing lines in the file (this is implemented in C and is therefore faster than calling <span class="mono">getall().split(...)</span>). The strings in the array will have been stripped of their newlines. Note that this will not rewind the file; rather it will return all of the lines from the current position. <span class="mono">EOF</span> will be set to <span class="mono">yes</span>. If the file mode is incorrect, this method will throw an error.</div>
 </li>
 <hr/>
-<li class="method-chunk"><span class="method-name">getall:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reads the contents of the file into a string</div><div class="method-discussion">This method will read the entire file into a string, newlines included. <span class="mono">EOF</span> will be set to <span class="mono">yes</span>.</div>
+<li class="method-chunk"><span class="method-name">getall:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reads the contents of the file into a string</div><div class="method-discussion">This method will read the entire file into a string, newlines included. <span class="mono">EOF</span> will be set to <span class="mono">yes</span>. If the file mode is incorrect, an error will be thrown.</div>
 </li>
 <hr/>
 <li class="method-chunk"><span class="method-name">put:</span><span class="method-func">func(</span><span class="method-func-arg">obj</span><span class="method-func">)</span><br/><div class="method-description">Outputs the argument to the file</div><table class="method-params">
@@ -25,7 +25,7 @@
 <td><span class="param-descrip">The object to print</span></li></td>
 </tr>
 </table>
-<div class="method-discussion">Stringifies the object and prints the result into the file, incrementing the position (note that no newline is added). This is the <span class="mono">File</span> counterpart of the <span class="mono">Io.put(...)</span> method.</div>
+<div class="method-discussion">Stringifies the object and prints the result into the file, incrementing the position (note that no newline is added). This is the <span class="mono">File</span> counterpart of the <span class="mono">Io.put(...)</span> method. An error will be thrown if the file mode is incorrect.</div>
 </li>
 <hr/>
 <li class="method-chunk"><span class="method-name">putln:</span><span class="method-func">func(</span><span class="method-func-arg">obj</span><span class="method-func">)</span><br/><div class="method-description">Outputs the argument to the file and appends a newline</div><table class="method-params">
@@ -34,13 +34,10 @@
 <td><span class="param-descrip">The object to print</span></li></td>
 </tr>
 </table>
-<div class="method-discussion">Same as the <span class="mono">put</span> method above, but includes a newline</div>
+<div class="method-discussion">Same as the <span class="mono">put</span> method above, but includes a newline.</div>
 </li>
 <hr/>
 <li class="method-chunk"><span class="method-name">close:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Closes the output stream and cleans up resources</div><div class="method-discussion"></div>
-</li>
-<hr/>
-<li class="method-chunk"><span class="method-name">readBytes:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Deprecated. Reads all of the bytes into a byte buffer (implemented as a <span class="mono">String</span>)</div><div class="method-discussion">This should not be used.</div>
 </li>
 </ul></div>
 </div></div>

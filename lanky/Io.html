@@ -44,7 +44,7 @@
 <td><span class="param-descrip">The read/write flags (r, w, b, etc..)</span></li></td>
 </tr>
 </table>
-<div class="method-discussion">This method will attempt to open the file. If the file is not found, the interpreter will segfault (don't be stupid). If the file is found and the requested mode is valid, a file object will be returned. Please see the <span class="mono">File</span> class for more information of applicable methods.</div>
+<div class="method-discussion">This method will attempt to open the file. If the file is not found or is invalid, this method will throw an error. If the file is found and the requested mode is valid, a file object will be returned. Please see the <span class="mono">File</span> class for more information of applicable methods.</div>
 </li>
 </ul></div>
 </div></div>
