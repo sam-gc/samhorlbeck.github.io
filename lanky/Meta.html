@@ -51,22 +51,6 @@
 <div class="method-discussion">If <span class="mono">allow</span> is set to <span class="mono">yes</span>, the interpreter will be allowed to use tagged integers in place of actual objects (this is the default behavior). If <span class="mono">no</span>, all new integers created will be full-fledged objects.</div>
 </li>
 <hr/>
-<li class="method-chunk"><span class="method-name">clear:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Clears the terminal screen</div><div class="method-discussion"></div>
-</li>
-<hr/>
-<li class="method-chunk"><span class="method-name">timout:</span><span class="method-func">func(</span><span class="method-func-arg">seconds</span><span class="method-func">, </span><span class="method-func-arg">callback</span><span class="method-func">)</span><br/><div class="method-description">Executes a function after a specific number of seconds</div><table class="method-params">
-<tr>
-<td><span class="param-name">seconds</span></td>
-<td><span class="param-descrip">The number of seconds to timeout</span></li></td>
-</tr>
-<tr>
-<td><span class="param-name">callback</span></td>
-<td><span class="param-descrip">The function to execute</span></li></td>
-</tr>
-</table>
-<div class="method-discussion">This method asynchronously waits in the background. Once the current call stack is empty and the seconds have elapsed, the function will be invoked.</div>
-</li>
-<hr/>
 <li class="method-chunk"><span class="method-name">audit:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Prints the size in bytes of the various C object structs</div><div class="method-discussion">Used exclusively for debugging purposes</div>
 </li>
 </ul></div>
