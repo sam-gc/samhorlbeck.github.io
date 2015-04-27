@@ -18,13 +18,26 @@
 <li class="method-chunk"><span class="method-name">reverse:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Reverses the string</div><div class="method-discussion">A new string is created whose contents are the reverse of the original string. This is then returned.</div>
 </li>
 <hr/>
-<li class="method-chunk"><span class="method-name">split:</span><span class="method-func">func(</span><span class="method-func-arg">delim</span><span class="method-func">)</span><br/><div class="method-description">Splits the string based on some delimeter</div><table class="method-params">
+<li class="method-chunk"><span class="method-name">split:</span><span class="method-func">func(</span><span class="method-func-arg">delim</span><span class="method-func">)</span><br/><div class="method-description">Splits the string based on a string or regex delimeter</div><table class="method-params">
 <tr>
 <td><span class="param-name">delim</span></td>
-<td><span class="param-descrip">The delimeter to use to split</span></li></td>
+<td><span class="param-descrip">The delimeter to use to split (another string or a regex)</span></li></td>
 </tr>
 </table>
-<div class="method-discussion">This method will split the string into an <span class="mono">Array</span> by scanning for the delimeters. Regexes are not accepted or recognized by the method. The strings in the returned array do not have the delimeter attached. If the delimeter is not contained in the string, an array of count 1 is returned.</div>
+<div class="method-discussion">This method will split the string into an <span class="mono">Array</span> by scanning for the delimeters. If a regex is provided and the global flag (<span class="mono">g</span>) is not set, then the string will only be split at the first occurrence. The strings in the returned array do not have the delimeter attached. If the delimeter is not contained in the string, an array of count 1 is returned.</div>
+</li>
+<hr/>
+<li class="method-chunk"><span class="method-name">replacing:</span><span class="method-func">func(</span><span class="method-func-arg">search</span><span class="method-func">, </span><span class="method-func-arg">repl</span><span class="method-func">)</span><br/><div class="method-description">Returns a new string with occurrences of some search pattern replaced</div><table class="method-params">
+<tr>
+<td><span class="param-name">search</span></td>
+<td><span class="param-descrip">The pattern to search for</span></li></td>
+</tr>
+<tr>
+<td><span class="param-name">repl</span></td>
+<td><span class="param-descrip">The string that will be used as replacement</span></li></td>
+</tr>
+</table>
+<div class="method-discussion">Regexes are not currently (but soon will be) supported for the <span class="mono">search</span> parameter. The original string is left untouched. A new string is allocated and constructed where all occurences of <span class="mono">search</span> are replaced by <span class="mono">repl</span>.</div>
 </li>
 <hr/>
 <li class="method-chunk"><span class="method-name">lower:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Returns the string with all characters in miniscule form</div><div class="method-discussion"></div>
