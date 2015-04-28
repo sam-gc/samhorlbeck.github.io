@@ -30,14 +30,14 @@
 <li class="method-chunk"><span class="method-name">replacing:</span><span class="method-func">func(</span><span class="method-func-arg">search</span><span class="method-func">, </span><span class="method-func-arg">repl</span><span class="method-func">)</span><br/><div class="method-description">Returns a new string with occurrences of some search pattern replaced</div><table class="method-params">
 <tr>
 <td><span class="param-name">search</span></td>
-<td><span class="param-descrip">The pattern to search for</span></li></td>
+<td><span class="param-descrip">The pattern to search for (string or regex)</span></li></td>
 </tr>
 <tr>
 <td><span class="param-name">repl</span></td>
-<td><span class="param-descrip">The string that will be used as replacement</span></li></td>
+<td><span class="param-descrip">A replacement string or a function</span></li></td>
 </tr>
 </table>
-<div class="method-discussion">Regexes are not currently (but soon will be) supported for the <span class="mono">search</span> parameter. The original string is left untouched. A new string is allocated and constructed where all occurences of <span class="mono">search</span> are replaced by <span class="mono">repl</span>.</div>
+<div class="method-discussion">The <span class="mono">search</span> parameter may be a regex or a string. The original string is left untouched. A new string is allocated and constructed where all occurences of <span class="mono">search</span> are replaced by <span class="mono">repl</span> if <span class="mono">repl</span> is a string, or by the return value of <span class="mono">repl</span> if <span class="mono">repl</span> is a function callback. If <span class="mono">repl</span> is a function, it will be passed as its only parameter the string matched by <span class="mono">search</span>.</div>
 </li>
 <hr/>
 <li class="method-chunk"><span class="method-name">lower:</span><span class="method-func">func(</span><span class="method-func">)</span><br/><div class="method-description">Returns the string with all characters in miniscule form</div><div class="method-discussion"></div>
