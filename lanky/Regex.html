@@ -11,13 +11,17 @@
 <li><span class="field-name">rb_:</span><span class="field-description">The binary blob holding a reference to the C regex</span></li>
 </ul></div>
 <div class="static-method-container"><div class="static-method-header">Static Methods</div><ul class="static-method-list">
-<li class="method-chunk"><span class="method-name">new:</span><span class="method-func">func(</span><span class="method-func-arg">pattern</span><span class="method-func">)</span><br/><div class="method-description">Creates a new regex</div><table class="method-params">
+<li class="method-chunk"><span class="method-name">new:</span><span class="method-func">func(</span><span class="method-func-arg">pattern</span><span class="method-func">, </span><span class="method-func-arg">[ 'flags' ]</span><span class="method-func">)</span><br/><div class="method-description">Creates a new regex</div><table class="method-params">
 <tr>
 <td><span class="param-name">pattern</span></td>
 <td><span class="param-descrip">The pattern to compile</span></li></td>
 </tr>
+<tr>
+<td><span class="param-name">[ 'flags' ]</span></td>
+<td><span class="param-descrip">Regex flags</span></li></td>
+</tr>
 </table>
-<div class="method-discussion">The regex is compiled when this method is called. The alternate <span class="mono">/pattern//</span> syntax may be used; in that case the regex is compiled during compilation of the rest of the program.</div>
+<div class="method-discussion">The regex is compiled when this method is called. The alternate <span class="mono">/pattern/flags/</span> syntax may be used; in that case the regex is compiled during compilation of the rest of the program. The <span class="mono">flags</span> parameter is optional; if no flags are provided (i.e. "gi", then the regex returned will be plain.</div>
 </li>
 </ul></div>
 <div class="proto-method-container"><div class="proto-method-header">Prototype Methods</div><ul class="proto-method-list">
